@@ -43,7 +43,7 @@ slip = data.variables["SLIP"][:]
 
 #%% Data manipulation
 
-variable = iifp[-1] # Variable of interest
+variable = oifp[-1] # Variable of interest
 variable = variable.flatten()
 
 fig = plt.figure(figsize=(11, 3))
@@ -51,10 +51,11 @@ ax = fig.add_subplot(111)
 
 plt.grid()
 histogram_var = variable[variable.mask == False]
-plt.hist(histogram_var, 5) # density=True)
+weights = np.ones_like(histogram_var) / len(histogram_var)
+plt.hist(histogram_var, bins=np.linspace(0, 365, 35), weights=weights)
 ax.set_axisbelow(True)
-#ax.yaxis.set_major_formatter(PercentFormatter(xmax=1))
-plt.title(r"IIFP Histogram, Year: 2017", fontsize=13)
+ax.yaxis.set_major_formatter(PercentFormatter(xmax=1))
+plt.title(r"OIFP Histogram, Year:2017", fontsize=13)
 plt.xlabel("Period in days", fontsize=10)
 plt.ylabel("Percentage of the area, %", fontsize=10)
 plt.xlim(0, 365)
