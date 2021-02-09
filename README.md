@@ -1,2 +1,5 @@
-# sea-ice-physics
-Final project for Sea Ice Physics course at UHH analyzing CMIP6 climate data
+# Sea Ice Physics
+Predicted hindcasts and forecasts using linear regression on ice-free period data in the Arctic ocean
+
+![Alt text](images/past_iifp_1950.png?raw=true "Title")
+![Alt text](images/future_iifp_2050.png?raw=true "Title")
