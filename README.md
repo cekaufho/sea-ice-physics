@@ -1,4 +1,6 @@
 # Sea Ice Physics
+![GitHub repo size](https://img.shields.io/github/repo-size/cekaufho/sea-ice-physics)
+
 Predicted hindcasts and forecasts using linear regression on ice-free period data in the Arctic ocean.<br>
 Data was accessed from the NOAA/NSIDC database.
 
